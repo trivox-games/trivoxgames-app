@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivox Games Studio | Indie Mobile Game Development</title>
+  <meta name="description" content="Trivox Games Studio is an independent mobile game development studio crafting engaging, high-performance Android games." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              500: '#6366f1',
+              600: '#4f46e5',
+              dark: '#0f172a',
+              card: '#1e293b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Navigation Bar -->
+  <nav class="sticky top-0 z-40 w-full backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/30">
+          <i data-lucide="gamepad-2" class="w-5 h-5 text-white"></i>
+        </div>
+        <span class="font-bold text-lg tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-300 bg-clip-text text-transparent">
+          Trivox Games Studio
+        </span>
+      </a>
+      
+      <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
+        <a href="#games" class="hover:text-indigo-400 transition-colors">Games</a>
+        <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
+        <button onclick="openModal('privacy-modal')" class="hover:text-indigo-400 transition-colors">Privacy Policy</button>
+      </div>
+
+      <a href="#contact" class="px-4 py-2 text-sm font-medium bg-indigo-600 hover:bg-indigo-500 rounded-lg transition-all shadow-md shadow-indigo-600/20">
+        Get in Touch
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative overflow-hidden pt-24 pb-20 lg:pt-32 lg:pb-28">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/30 via-slate-950 to-slate-950"></div>
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-6">
+        <span>Android Game Studio</span>
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+        Crafting Immersive, <br class="hidden sm:inline" />
+        <span class="bg-gradient-to-r from-indigo-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent">
+          Lightweight Mobile Experiences
+        </span>
+      </h1>
+      <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10">
+        Trivox Games Studio is an independent mobile game development studio focused on accessible mechanics, fluid frame rates, and original digital play.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#games" class="w-full sm:w-auto px-8 py-3.5 bg-indigo-600 hover:bg-indigo-500 font-semibold rounded-xl transition-all shadow-lg shadow-indigo-600/30 flex items-center justify-center gap-2">
+          <i data-lucide="play" class="w-4 h-4 fill-current"></i> Explore Titles
+        </a>
+        <a href="#about" class="w-full sm:w-auto px-8 py-3.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-xl border border-slate-700 transition-all flex items-center justify-center">
+          Our Mission
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 border-t border-slate-900 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-semibold text-indigo-400 uppercase tracking-widest mb-2">About Studio</h2>
+        <h3 class="text-3xl font-bold text-white tracking-tight">Built by Engineers. Driven by Play.</h3>
+        <p class="mt-4 text-slate-400 leading-relaxed">
+          Based in India, Trivox Games Studio was established to build reliable, high-performance titles optimized across varied Android hardware architectures.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-5">
+            <i data-lucide="cpu" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-white mb-2">Native Optimization</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Engineered to achieve stable 60+ FPS performance while minimizing battery consumption and binary sizes.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-5">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-white mb-2">Clean Privacy Standards</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Strict adherence to Google Play policies with zero deceptive monetization or unnecessary telemetry tracking.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-5">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-white mb-2">Polished Mechanics</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Focused on intuitive controls, tactile feedback, and accessible pick-up-and-play sessions for all audiences.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Games Section -->
+  <section id="games" class="py-20 border-t border-slate-900 bg-slate-900/30">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+        <div>
+          <h2 class="text-xs font-semibold text-indigo-400 uppercase tracking-widest mb-2">Portfolio</h2>
+          <h3 class="text-3xl font-bold text-white tracking-tight">Current & Upcoming Titles</h3>
+        </div>
+        <p class="text-sm text-slate-400 mt-2 md:mt-0">Available natively on Google Play</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Game Card 1 -->
+        <div class="rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 flex flex-col group hover:border-slate-700 transition-all">
+          <div class="h-48 bg-gradient-to-tr from-indigo-950 via-slate-900 to-indigo-900/40 flex items-center justify-center border-b border-slate-800 relative">
+            <i data-lucide="swords" class="w-16 h-16 text-indigo-500/40 group-hover:scale-110 transition-transform duration-300"></i>
+            <span class="absolute top-4 right-4 text-xs font-medium px-2.5 py-1 bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 rounded-full">
+              In Development
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="text-xl font-bold text-white mb-2">Project: Shadow Run</h4>
+              <p class="text-sm text-slate-400 mb-4">
+                Fast-paced hyper-casual arcade runner built with lightweight physics and responsive single-touch steering.
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-800/80 text-xs text-slate-400">
+              <span>Platform: Android</span>
+              <span class="text-indigo-400 font-medium">Target Release: Q3 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Card 2 -->
+        <div class="rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 flex flex-col group hover:border-slate-700 transition-all">
+          <div class="h-48 bg-gradient-to-tr from-violet-950 via-slate-900 to-sky-900/40 flex items-center justify-center border-b border-slate-800 relative">
+            <i data-lucide="puzzle" class="w-16 h-16 text-violet-500/40 group-hover:scale-110 transition-transform duration-300"></i>
+            <span class="absolute top-4 right-4 text-xs font-medium px-2.5 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-full">
+              Pre-Alpha
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="text-xl font-bold text-white mb-2">Project: Hexa Grid</h4>
+              <p class="text-sm text-slate-400 mb-4">
+                A minimalistic spatial puzzle experience focusing on logic puzzles, haptic feedback, and offline play.
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-800/80 text-xs text-slate-400">
+              <span>Platform: Android</span>
+              <span class="text-indigo-400 font-medium">Target Release: Q4 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Entity Verification Section -->
+  <section id="contact" class="py-20 border-t border-slate-900 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <div class="lg:col-span-5">
+          <h2 class="text-xs font-semibold text-indigo-400 uppercase tracking-widest mb-2">Contact & Inquiries</h2>
+          <h3 class="text-3xl font-bold text-white tracking-tight mb-4">Official Studio Details</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-8">
+            For player support, bug submissions, business partnerships, or Google Developer policy inquiries, reach our team directly.
+          </p>
+
+          <div class="space-y-5 text-sm">
+            <div class="flex items-start space-x-3">
+              <i data-lucide="building-2" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="block text-white font-medium">Legal Entity</span>
+                <span class="text-slate-400">Trivox Games Studio</span>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <i data-lucide="mail" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="block text-white font-medium">Official Developer Email</span>
+                <a href="mailto:trivoxgames@gmail.com" class="text-indigo-400 hover:underline">trivoxgames@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <i data-lucide="globe" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="block text-white font-medium">Domain</span>
+                <span class="text-slate-400">https://www.trivoxgames.com</span>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="block text-white font-medium">Location</span>
+                <span class="text-slate-400">India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800">
+            <h4 class="text-lg font-bold text-white mb-2">Send Developer Message</h4>
+            <p class="text-xs text-slate-400 mb-6">We respond to technical and business inquiries within 24–48 hours.</p>
+            
+            <form onsubmit="event.preventDefault(); alert('Message received. Our studio team will review your inquiry.');" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs text-slate-400 uppercase font-semibold mb-1">Your Name</label>
+                  <input type="text" required class="w-full px-4 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-sm text-white focus:outline-none focus:border-indigo-500" placeholder="Developer / Player" />
+                </div>
+                <div>
+                  <label class="block text-xs text-slate-400 uppercase font-semibold mb-1">Email Address</label>
+                  <input type="email" required class="w-full px-4 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-sm text-white focus:outline-none focus:border-indigo-500" placeholder="you@example.com" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs text-slate-400 uppercase font-semibold mb-1">Subject</label>
+                <input type="text" required class="w-full px-4 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-sm text-white focus:outline-none focus:border-indigo-500" placeholder="Bug Report / Partnership / Inquiry" />
+              </div>
+              <div>
+                <label class="block text-xs text-slate-400 uppercase font-semibold mb-1">Message</label>
+                <textarea rows="4" required class="w-full px-4 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-sm text-white focus:outline-none focus:border-indigo-500" placeholder="Your message..."></textarea>
+              </div>
+              <button type="submit" class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 font-semibold rounded-lg text-sm transition-all shadow-md shadow-indigo-600/20">
+                Send Transmission
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Universal Footer -->
+  <footer class="border-t border-slate-900 bg-slate-950 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div>
+        © 2026 Trivox Games Studio. All rights reserved.
+      </div>
+      <div class="flex items-center space-x-6">
+        <button onclick="openModal('privacy-modal')" class="hover:text-indigo-400 transition-colors">Privacy Policy</button>
+        <button onclick="openModal('terms-modal')" class="hover:text-indigo-400 transition-colors">Terms of Service</button>
+        <a href="mailto:trivoxgames@gmail.com" class="hover:text-indigo-400 transition-colors">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: Privacy Policy -->
+  <div id="privacy-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 max-w-2xl w-full max-h-[85vh] rounded-2xl flex flex-col shadow-2xl overflow-hidden">
+      <div class="p-6 border-b border-slate-800 flex items-center justify-between">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <i data-lucide="shield" class="w-5 h-5 text-indigo-400"></i> Privacy Policy
+        </h3>
+        <button onclick="closeModal('privacy-modal')" class="text-slate-400 hover:text-white p-1 rounded-lg">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 overflow-y-auto text-sm text-slate-300 space-y-4 leading-relaxed">
+        <p class="text-xs text-slate-400">Last updated: September 2026</p>
+        <p>This Privacy Policy explains how <strong>Trivox Games Studio</strong> ("we", "us", or "our") manages user information across our published mobile games on Google Play.</p>
+        <h4 class="font-bold text-white pt-2">1. Information Collection and Use</h4>
+        <p>Our games are built for broad audience entertainment. We do not require users to register or provide personal identity data to play our offline or single-player games. We do not harvest sensitive data, phone numbers, or private user files.</p>
+        <h4 class="font-bold text-white pt-2">2. Third-Party Integrations</h4>
+        <p>To support basic diagnostics and core game engine services, our apps may interface with standard Google Play Services (e.g., Google Play Games Services, Firebase Crashlytics). These services collect anonymous diagnostics, device models, and crash stacks strictly for operational debugging.</p>
+        <h4 class="font-bold text-white pt-2">3. Advertising</h4>
+        <p>If advertisements are displayed, they are served through certified Google AdMob ad networks in strict accordance with the Google Play Developer Policy. Ad networks may utilize unique, resettable advertising IDs to serve relevant ads.</p>
+        <h4 class="font-bold text-white pt-2">4. Children's Privacy</h4>
+        <p>We do not knowingly collect personal data from children under 13. If any game is intended for family audiences, we restrict third-party SDKs to child-directed mode in compliance with COPPA.</p>
+        <h4 class="font-bold text-white pt-2">5. Inquiries & Contact</h4>
+        <p>For questions or privacy requests regarding our applications, email us at: <a href="mailto:trivoxgames@gmail.com" class="text-indigo-400 underline">trivoxgames@gmail.com</a>.</p>
+      </div>
+      <div class="p-4 border-t border-slate-800 bg-slate-950 flex justify-end">
+        <button onclick="closeModal('privacy-modal')" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-sm font-medium">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Terms of Service -->
+  <div id="terms-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 max-w-2xl w-full max-h-[85vh] rounded-2xl flex flex-col shadow-2xl overflow-hidden">
+      <div class="p-6 border-b border-slate-800 flex items-center justify-between">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <i data-lucide="file-text" class="w-5 h-5 text-indigo-400"></i> Terms of Service
+        </h3>
+        <button onclick="closeModal('terms-modal')" class="text-slate-400 hover:text-white p-1 rounded-lg">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 overflow-y-auto text-sm text-slate-300 space-y-4 leading-relaxed">
+        <p class="text-xs text-slate-400">Last updated: September 2026</p>
+        <p>By downloading or running mobile applications created by <strong>Trivox Games Studio</strong>, you agree to these Terms of Service.</p>
+        <h4 class="font-bold text-white pt-2">1. License & Usage</h4>
+        <p>Trivox Games Studio grants users a personal, revocable, non-exclusive, non-transferable license to install and play our games strictly for non-commercial personal entertainment.</p>
+        <h4 class="font-bold text-white pt-2">2. Intellectual Property</h4>
+        <p>All source code, mechanics, graphical assets, sounds, and trademarks associated with Trivox Games Studio remain exclusive intellectual property of the studio.</p>
+        <h4 class="font-bold text-white pt-2">3. Disclaimer of Warranties</h4>
+        <p>Applications are provided on an "as-is" basis. Trivox Games Studio disclaims liability for device incompatibility, third-party network outages, or hardware limitations.</p>
+      </div>
+      <div class="p-4 border-t border-slate-800 bg-slate-950 flex justify-end">
+        <button onclick="closeModal('terms-modal')" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-sm font-medium">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lucide Icon Renderer & Modal Script -->
+  <script>
+    lucide.createIcons();
+
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal on escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal('privacy-modal');
+        closeModal('terms-modal');
+      }
+    });
+  </script>
+</body>
+</html>
