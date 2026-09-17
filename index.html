@@ -44,6 +44,7 @@
       <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
         <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
         <a href="#games" class="hover:text-indigo-400 transition-colors">Games</a>
+        <a href="/privacy-policy.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a>
         <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
       </div>
 
@@ -273,43 +274,12 @@
         © 2026 Trivox Games Studio. All rights reserved.
       </div>
       <div class="flex items-center space-x-6">
-        <button onclick="openModal('privacy-modal')" class="hover:text-indigo-400 transition-colors">Privacy Policy</button>
+        <a href="/privacy-policy.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a>
         <button onclick="openModal('terms-modal')" class="hover:text-indigo-400 transition-colors">Terms of Service</button>
         <a href="mailto:studio@trivoxgames.com" class="hover:text-indigo-400 transition-colors">Support</a>
       </div>
     </div>
   </footer>
-
-  <!-- MODAL: Privacy Policy -->
-  <div id="privacy-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="bg-slate-900 border border-slate-800 max-w-2xl w-full max-h-[85vh] rounded-2xl flex flex-col shadow-2xl overflow-hidden">
-      <div class="p-6 border-b border-slate-800 flex items-center justify-between">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2">
-          <i data-lucide="shield" class="w-5 h-5 text-indigo-400"></i> Privacy Policy
-        </h3>
-        <button onclick="closeModal('privacy-modal')" class="text-slate-400 hover:text-white p-1 rounded-lg">
-          <i data-lucide="x" class="w-5 h-5"></i>
-        </button>
-      </div>
-      <div class="p-6 overflow-y-auto text-sm text-slate-300 space-y-4 leading-relaxed">
-        <p class="text-xs text-slate-400">Last updated: September 2026</p>
-        <p>This Privacy Policy explains how <strong>Trivox Games Studio</strong> ("we", "us", or "our") manages user information across our published mobile games on Google Play.</p>
-        <h4 class="font-bold text-white pt-2">1. Information Collection and Use</h4>
-        <p>Our games are built for broad audience entertainment. We do not require users to register or provide personal identity data to play our offline or single-player games. We do not harvest sensitive data, phone numbers, or private user files.</p>
-        <h4 class="font-bold text-white pt-2">2. Third-Party Integrations</h4>
-        <p>To support basic diagnostics and core game engine services, our apps may interface with standard Google Play Services (e.g., Google Play Games Services, Firebase Crashlytics). These services collect anonymous diagnostics, device models, and crash stacks strictly for operational debugging.</p>
-        <h4 class="font-bold text-white pt-2">3. Advertising</h4>
-        <p>If advertisements are displayed, they are served through certified Google AdMob ad networks in strict accordance with the Google Play Developer Policy. Ad networks may utilize unique, resettable advertising IDs to serve relevant ads.</p>
-        <h4 class="font-bold text-white pt-2">4. Children's Privacy</h4>
-        <p>We do not knowingly collect personal data from children under 13. If any game is intended for family audiences, we restrict third-party SDKs to child-directed mode in compliance with COPPA.</p>
-        <h4 class="font-bold text-white pt-2">5. Inquiries & Contact</h4>
-        <p>For questions or privacy requests regarding our applications, email us at: <a href="mailto:studio@trivoxgames.com" class="text-indigo-400 underline">studio@trivoxgames.com</a>.</p>
-      </div>
-      <div class="p-4 border-t border-slate-800 bg-slate-950 flex justify-end">
-        <button onclick="closeModal('privacy-modal')" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-sm font-medium">Close</button>
-      </div>
-    </div>
-  </div>
 
   <!-- MODAL: Terms of Service -->
   <div id="terms-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
@@ -359,7 +329,6 @@
     // Close modal on escape key
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        closeModal('privacy-modal');
         closeModal('terms-modal');
       }
     });
